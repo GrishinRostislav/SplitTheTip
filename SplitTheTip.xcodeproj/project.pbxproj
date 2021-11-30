@@ -83,9 +83,9 @@
 			isa = PBXGroup;
 			children = (
 				C7C425E82754FEDF00BF9E8B /* AmountView.swift */,
+				C7C425EC2754FF0900BF9E8B /* PercentageView.swift */,
 				C7C425E62754FEB900BF9E8B /* CountOfPeopleView.swift */,
 				C7C425EA2754FEF200BF9E8B /* AmountTotalView.swift */,
-				C7C425EC2754FF0900BF9E8B /* PercentageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

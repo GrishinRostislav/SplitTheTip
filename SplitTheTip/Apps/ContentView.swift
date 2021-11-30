@@ -14,7 +14,7 @@ struct ContentView: View {
     @State private var selectedPercentage = 20 // default number of percentage
     @State private var friendsName: [String] = [] //friends name for random tips
     
-    let arrayOfPercentages = [10, 15, 20, 25, 0] //default array of percentage
+    
     
     
     
@@ -25,7 +25,9 @@ struct ContentView: View {
                 
                 //MARK: - AmountView
                     AmountView(amount: $amount)
+                
                 //MARK: - Tip
+                PercentageView(selectedPercentage: $selectedPercentage)
                 
                 //MARK: - Count of People
                 

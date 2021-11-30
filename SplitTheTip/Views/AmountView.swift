@@ -16,9 +16,7 @@ struct AmountView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Amount")
-                .font(.headline)
-                .foregroundColor(Color("TitleTextColor"))
-                .padding(.horizontal, 15)
+                .headerStyle()
             TextField("Amount", value: $amount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
                 .keyboardType(.decimalPad)
                 .rowStyle()

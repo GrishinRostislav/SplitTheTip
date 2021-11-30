@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//MARK: - Style For Row
 struct StyleForRows: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -24,5 +25,22 @@ struct StyleForRows: ViewModifier {
 extension View {
     func rowStyle() -> some View {
         modifier(StyleForRows())
+    }
+}
+
+//MARK: - Style For HeaderRow
+struct StyleForHeader: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.headline)
+            .foregroundColor(Color("TitleTextColor"))
+            .padding(.horizontal, 15)
+            .padding(.top, 15)
+    }
+}
+
+extension View {
+    func headerStyle() -> some View {
+        modifier(StyleForHeader())
     }
 }
