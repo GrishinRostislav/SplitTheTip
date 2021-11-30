@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C75ECA4F27564714008D45C6 /* AddingNewFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75ECA4E27564714008D45C6 /* AddingNewFriend.swift */; };
 		C7C425D72754F37B00BF9E8B /* SplitTheTipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C425D62754F37B00BF9E8B /* SplitTheTipApp.swift */; };
 		C7C425D92754F37B00BF9E8B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C425D82754F37B00BF9E8B /* ContentView.swift */; };
 		C7C425DB2754F37E00BF9E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C425DA2754F37E00BF9E8B /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C75ECA4E27564714008D45C6 /* AddingNewFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingNewFriend.swift; sourceTree = "<group>"; };
 		C7C425D32754F37B00BF9E8B /* SplitTheTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitTheTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C425D62754F37B00BF9E8B /* SplitTheTipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitTheTipApp.swift; sourceTree = "<group>"; };
 		C7C425D82754F37B00BF9E8B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				C7C425E82754FEDF00BF9E8B /* AmountView.swift */,
 				C7C425EC2754FF0900BF9E8B /* PercentageView.swift */,
 				C7C425E62754FEB900BF9E8B /* CountOfPeopleView.swift */,
+				C75ECA4E27564714008D45C6 /* AddingNewFriend.swift */,
 				C7C425EA2754FEF200BF9E8B /* AmountTotalView.swift */,
 			);
 			path = Views;
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7C425EB2754FEF200BF9E8B /* AmountTotalView.swift in Sources */,
+				C75ECA4F27564714008D45C6 /* AddingNewFriend.swift in Sources */,
 				C7C425E72754FEB900BF9E8B /* CountOfPeopleView.swift in Sources */,
 				C7C425D92754F37B00BF9E8B /* ContentView.swift in Sources */,
 				C7FBA9F727557532007747D5 /* StyleForRows.swift in Sources */,

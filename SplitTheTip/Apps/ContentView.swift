@@ -24,12 +24,14 @@ struct ContentView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 
                 //MARK: - AmountView
-                    AmountView(amount: $amount)
+                AmountView(amount: $amount)
                 
                 //MARK: - Tip
                 PercentageView(selectedPercentage: $selectedPercentage)
                 
                 //MARK: - Count of People
+                
+                CountOfPeopleView(numberOfPeople: $numberOfPeople)
                 
                 //MARK: - People who have to pay yhe bill
                 
