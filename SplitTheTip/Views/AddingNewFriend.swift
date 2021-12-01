@@ -8,46 +8,47 @@
 import SwiftUI
 
 struct AddingNewFriend: View {
-    
-    let screenSize = UIScreen.main.bounds
+    @Environment(\.presentationMode) var presentationMode
     
     @Binding var friends: [String]
     @State private var newFriend = ""
-    @Binding var isShown: Bool
     
     
     var body: some View {
-        VStack {
-            HStack {
-                TextField("Add new friend", text: $newFriend)
-                    .frame(width: 200)
-                Button {
-                    if !newFriend.isEmpty {
-                        friends.append(newFriend)
-                        newFriend = ""
+        
+        NavigationView {
+            Form {
+                HStack {
+                    TextField("Adding new frined", text: $newFriend)
+                    Button {
+                        if !newFriend.isEmpty {
+                            friends.append(newFriend)
+                            newFriend = ""
+                        }
+                    } label: {
+                        Image(systemName: "plus.circle")
                     }
-                } label: {
-                    Image(systemName: "plus.circle")
+                }
+                List {
+                    ForEach(friends, id: \.self) {
+                        Text($0)
+                    }
                 }
             }
-            
-            List{
-                ForEach (friends, id: \.self) {
-                    Text($0)
+            .navigationTitle("Add friend")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                Button("Done") {
+                    presentationMode.wrappedValue.dismiss()
                 }
             }
         }
-        .padding()
-        .frame(width: screenSize.width * 0.7, height: screenSize.height * 0.3)
-        .background(Color.white)
-        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+        
     }
 }
 
 struct AddingNewFriend_Previews: PreviewProvider {
     static var previews: some View {
-        AddingNewFriend(friends: .constant(["Bob", "Michael", "Ros"]), isShown: .constant(true))
-            .previewLayout(.sizeThatFits)
-            .frame(maxWidth: .infinity)
+        AddingNewFriend(friends: .constant(["Bob", "Michael", "Ros"]))
     }
 }

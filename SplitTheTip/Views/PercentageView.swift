@@ -44,7 +44,7 @@ struct PercentageView: View {
                 .foregroundColor(.gray)
             }
             .rowStyle()
-            .padding()
+            .padding(.top, 15)
         }//VStack
     }
     

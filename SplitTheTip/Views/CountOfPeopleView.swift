@@ -11,7 +11,7 @@ struct CountOfPeopleView: View {
     //MARK: - Properties
     @Binding var numberOfPeople: Int
     @State private var friends: [String] = []
-    @State private var isShowingAlert = false
+    @State private var isShowAddFriend = false
     @State private var newFriend = ""
     
     //MARK: - Body
@@ -28,9 +28,19 @@ struct CountOfPeopleView: View {
                     Spacer()
                     Picker("Select number of people", selection: $numberOfPeople) {
                         ForEach(2 ..< 100) {
-                            Text("\($0) people")
+                            Text("\($0)")
+                                .rotationEffect(Angle(degrees: 90))
                         }
                     }
+                    .rotationEffect(Angle(degrees: -90))
+                    .frame(width: 120, height: 30)
+                    .pickerStyle(.wheel)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.white, lineWidth: 4)
+                            .shadow(color: Color.gray.opacity(0.5), radius:4, x: 0, y: 0)
+                    )
+                    .clipped()
                 } //HStack Row
                 .foregroundColor(Color("TitleTextColor"))
                 .font(.title3)
@@ -43,13 +53,14 @@ struct CountOfPeopleView: View {
                 .padding(.horizontal, 15)
                 
                 //Random people who needs to pay all Tip
+                Text("Who needs to pay all tips?")
+                    .headerStyle()
+                
             }
-            Text("Who needs to pay all tips?")
-                .headerStyle()
             
             HStack {
                 Button {
-                   whoPay()
+                    print("")
                 } label: {
                     HStack {
                         Text("Random")
@@ -58,34 +69,24 @@ struct CountOfPeopleView: View {
                     .font(.title2)
                     .foregroundColor(.gray)
                 }
-            .rowStyle()
+                .rowStyle()
                 
                 Button {
-                    addFriends()
+                    isShowAddFriend.toggle()
                 } label: {
                     HStack {
                         Image(systemName: "plus.circle")
                         Text("Add Friend")
                     }
-                    .font(.title2)
                     .foregroundColor(.gray)
                 }
+                .fullScreenCover(isPresented: $isShowAddFriend, content: {
+                    AddingNewFriend(friends: $friends)
+                })
                 .rowStyle()
             }
         } //VStack
     }
-    
-    func whoPay() {
-        if friends.isEmpty || numberOfPeople > friends.count{
-            print("Is empty")
-            isShowingAlert = true
-        }
-    }
-    
-    func addFriends() {
-        AddingNewFriend(friends: $friends, isShown: $isShowingAlert)
-    }
-    
 }
 
 //MARK: - Preview

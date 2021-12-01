@@ -11,7 +11,6 @@ import SwiftUI
 struct StyleForRows: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .font(.title2.bold())
             .padding()
             .overlay(
                 RoundedRectangle(cornerRadius: 16)

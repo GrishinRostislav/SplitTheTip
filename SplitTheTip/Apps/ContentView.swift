@@ -21,6 +21,7 @@ struct ContentView: View {
     //MARK: - Body
     var body: some View {
         NavigationView {
+            
             ScrollView(.vertical, showsIndicators: false) {
                 
                 //MARK: - AmountView
