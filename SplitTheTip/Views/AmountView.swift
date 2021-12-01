@@ -15,12 +15,14 @@ struct AmountView: View {
     //MARK: - Body
     var body: some View {
         VStack(alignment: .leading) {
+            //Header
             Text("Amount")
                 .headerStyle()
+            //TextField
             TextField("Amount", value: $amount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
                 .keyboardType(.decimalPad)
                 .rowStyle()
-        }
+        }// VStack
     }
 }
 

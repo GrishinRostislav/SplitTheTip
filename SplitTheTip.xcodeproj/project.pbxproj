@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C75ECA4F27564714008D45C6 /* AddingNewFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75ECA4E27564714008D45C6 /* AddingNewFriend.swift */; };
+		C78CB882275802F0002C3467 /* HorizontalPickerPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78CB881275802F0002C3467 /* HorizontalPickerPeople.swift */; };
+		C78CB8842758058B002C3467 /* HorizontalPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78CB8832758058B002C3467 /* HorizontalPicker.swift */; };
+		C78CB88627580AB3002C3467 /* ButtonRandomPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78CB88527580AB3002C3467 /* ButtonRandomPeople.swift */; };
 		C7C425D72754F37B00BF9E8B /* SplitTheTipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C425D62754F37B00BF9E8B /* SplitTheTipApp.swift */; };
 		C7C425D92754F37B00BF9E8B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C425D82754F37B00BF9E8B /* ContentView.swift */; };
 		C7C425DB2754F37E00BF9E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C425DA2754F37E00BF9E8B /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		C75ECA4E27564714008D45C6 /* AddingNewFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingNewFriend.swift; sourceTree = "<group>"; };
+		C78CB881275802F0002C3467 /* HorizontalPickerPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalPickerPeople.swift; sourceTree = "<group>"; };
+		C78CB8832758058B002C3467 /* HorizontalPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalPicker.swift; sourceTree = "<group>"; };
+		C78CB88527580AB3002C3467 /* ButtonRandomPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRandomPeople.swift; sourceTree = "<group>"; };
 		C7C425D32754F37B00BF9E8B /* SplitTheTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitTheTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C425D62754F37B00BF9E8B /* SplitTheTipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitTheTipApp.swift; sourceTree = "<group>"; };
 		C7C425D82754F37B00BF9E8B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,8 +93,10 @@
 				C7C425E82754FEDF00BF9E8B /* AmountView.swift */,
 				C7C425EC2754FF0900BF9E8B /* PercentageView.swift */,
 				C7C425E62754FEB900BF9E8B /* CountOfPeopleView.swift */,
+				C78CB881275802F0002C3467 /* HorizontalPickerPeople.swift */,
 				C75ECA4E27564714008D45C6 /* AddingNewFriend.swift */,
 				C7C425EA2754FEF200BF9E8B /* AmountTotalView.swift */,
+				C78CB88527580AB3002C3467 /* ButtonRandomPeople.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				C7FBA9F627557532007747D5 /* StyleForRows.swift */,
+				C78CB8832758058B002C3467 /* HorizontalPicker.swift */,
 			);
 			path = Exctension;
 			sourceTree = "<group>";
@@ -182,10 +191,13 @@
 				C7C425EB2754FEF200BF9E8B /* AmountTotalView.swift in Sources */,
 				C75ECA4F27564714008D45C6 /* AddingNewFriend.swift in Sources */,
 				C7C425E72754FEB900BF9E8B /* CountOfPeopleView.swift in Sources */,
+				C78CB88627580AB3002C3467 /* ButtonRandomPeople.swift in Sources */,
+				C78CB8842758058B002C3467 /* HorizontalPicker.swift in Sources */,
 				C7C425D92754F37B00BF9E8B /* ContentView.swift in Sources */,
 				C7FBA9F727557532007747D5 /* StyleForRows.swift in Sources */,
 				C7C425E92754FEDF00BF9E8B /* AmountView.swift in Sources */,
 				C7C425ED2754FF0900BF9E8B /* PercentageView.swift in Sources */,
+				C78CB882275802F0002C3467 /* HorizontalPickerPeople.swift in Sources */,
 				C7C425D72754F37B00BF9E8B /* SplitTheTipApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

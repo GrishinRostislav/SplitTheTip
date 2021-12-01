@@ -16,7 +16,7 @@ struct PercentageView: View {
     var body: some View {
         
         VStack(alignment: .center) {
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading) { //Header + Picker
                 
                 //Header
                 Text("Сколько чаевых вы хотите оставить?")
@@ -27,7 +27,7 @@ struct PercentageView: View {
                     ForEach(arrayOfPercentages, id: \.self) {
                         Text($0, format: .percent)
                     }
-                }
+                }//Picker
                 .pickerStyle(.segmented)
                 .rowStyle()
             } //VStack inner
@@ -39,16 +39,17 @@ struct PercentageView: View {
                 HStack {
                     Text("Random")
                     Image(systemName: "dice.fill")
-                }
+                }//HStack
                 .font(.title2)
                 .foregroundColor(.gray)
             }
-            .rowStyle()
+            .rowStyle()// Style for ROW
             .padding(.top, 15)
         }//VStack
     }
     
     //MARK: Selected a random TIP
+    //: All of this needs for shuffle percentage 
     func randomTip() {
         let randomIndex = Int.random(in: 0..<arrayOfPercentages.count)
         print("Random \(randomIndex)")

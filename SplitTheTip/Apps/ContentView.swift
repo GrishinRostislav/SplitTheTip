@@ -23,23 +23,22 @@ struct ContentView: View {
         NavigationView {
             
             ScrollView(.vertical, showsIndicators: false) {
-                
-                //MARK: - AmountView
-                AmountView(amount: $amount)
-                
-                //MARK: - Tip
-                PercentageView(selectedPercentage: $selectedPercentage)
-                
-                //MARK: - Count of People
-                
-                CountOfPeopleView(numberOfPeople: $numberOfPeople)
-                
-                //MARK: - People who have to pay yhe bill
-                
-                //MARK: - Total from other people
-                
-                //MARK: - Total Amount
-                
+                VStack {
+                    //MARK: - AmountView
+                    AmountView(amount: $amount)
+                    
+                    //MARK: - Tip
+                    PercentageView(selectedPercentage: $selectedPercentage)
+                    
+                    //MARK: - Count of People
+                    CountOfPeopleView(numberOfPeople: $numberOfPeople)
+                    
+                    //MARK: - People who have to pay yhe bill
+                    
+                    //MARK: - Total from other people
+                    
+                    //MARK: - Total Amount
+                }
             }//ScrollView
             .navigationTitle("Split The Tip")
         }// NavigationView
