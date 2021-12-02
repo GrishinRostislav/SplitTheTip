@@ -17,7 +17,8 @@ struct ContentView: View {
     @FocusState var isInputActive: Bool
     
     init() {
-        UITableView.appearance().backgroundColor = .clear
+        UITableView.appearance().backgroundColor = UIColor(Color("BackGround"))
+       // UITableViewCell.appearance().backgroundColor = .clear
     }
     
     
@@ -60,7 +61,6 @@ struct ContentView: View {
             .listStyle(.grouped)
             .navigationTitle("Split The Tip")
         }// NavigationView
-        
     }
 }
 
@@ -69,5 +69,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.light)
     }
 }

@@ -20,15 +20,14 @@ struct AmountView: View {
                 TextField("Amount", value: $amount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
                     .keyboardType(.decimalPad)
                     .focused($isInputActive)
-                                    .toolbar {
-                                        ToolbarItemGroup(placement: .keyboard) {
-                                            Spacer()
-
-                                            Button("Done") {
-                                                isInputActive = false
-                                            }
-                                        }
-                                    }
+                    .toolbar {
+                        ToolbarItemGroup(placement: .keyboard) {
+                            Spacer()
+                            Button("Done") {
+                                isInputActive = false
+                            }
+                        }
+                    }
             }
             .frame(maxHeight: 60)
             .padding()
@@ -42,8 +41,8 @@ struct AmountView: View {
 //MARK: - Preview
 struct AmountView_Previews: PreviewProvider {
     static var previews: some View {
-            List {
-                AmountView(amount: .constant(100.6))
-            }.listStyle(.sidebar)
+        List {
+            AmountView(amount: .constant(100.6))
+        }.listStyle(.sidebar)
     }
 }

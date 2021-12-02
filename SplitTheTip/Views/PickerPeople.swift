@@ -18,7 +18,7 @@ struct PickerPeople: View {
             Group {
                 Picker("Number of people", selection: $numberOfPeople) {
                     ForEach(2 ..< 100) {
-                        Text("\($0)")
+                        Text("\($0) people")
                     }
                 }
             }
