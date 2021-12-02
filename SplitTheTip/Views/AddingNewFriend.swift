@@ -8,25 +8,28 @@
 import SwiftUI
 
 struct AddingNewFriend: View {
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.dismiss) var dismiss
     
     @Binding var friends: [String]
     @State private var newFriend = ""
     
+    var peopleCount = 0
     
     var body: some View {
         
         NavigationView {
             Form {
-                HStack {
-                    TextField("Adding new frined", text: $newFriend)
-                    Button {
-                        if !newFriend.isEmpty {
-                            friends.append(newFriend)
-                            newFriend = ""
+                Section(header: Text("You need to add \(peopleCount - friends.count) more people")) {
+                    HStack {
+                        TextField("Adding new frined", text: $newFriend)
+                        Button {
+                            if !newFriend.isEmpty && peopleCount > friends.count {
+                                friends.append(newFriend)
+                                newFriend = ""
+                            }
+                        } label: {
+                            Image(systemName: "plus.circle")
                         }
-                    } label: {
-                        Image(systemName: "plus.circle")
                     }
                 }
                 List {
@@ -39,7 +42,7 @@ struct AddingNewFriend: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 Button("Done") {
-                    presentationMode.wrappedValue.dismiss()
+                    dismiss()
                 }
             }
         }

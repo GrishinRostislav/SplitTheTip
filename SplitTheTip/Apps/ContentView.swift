@@ -13,40 +13,59 @@ struct ContentView: View {
     @State private var numberOfPeople = 2 // default number
     @State private var selectedPercentage = 20 // default number of percentage
     @State private var friendsName: [String] = [] //friends name for random tips
+    @State private var arrayOfPercentages = [10, 15, 20, 25, 0]
+    @FocusState var isInputActive: Bool
     
-    
-    
+    init() {
+        UITableView.appearance().backgroundColor = .clear
+    }
     
     
     //MARK: - Body
     var body: some View {
         NavigationView {
-            
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack {
-                    //MARK: - AmountView
-                    AmountView(amount: $amount)
-                    
-                    //MARK: - Tip
-                    PercentageView(selectedPercentage: $selectedPercentage)
-                    
-                    //MARK: - Count of People
-                    CountOfPeopleView(numberOfPeople: $numberOfPeople)
-                    
-                    //MARK: - People who have to pay yhe bill
-                    
-                    //MARK: - Total from other people
-                    
-                    //MARK: - Total Amount
+            List {
+                //MARK: - AmountView
+                
+                AmountView(amount: $amount)
+                    .listRowSeparator(.hidden)
+                
+                //MARK: - Tip
+                PercentageView(selectedPercentage: $selectedPercentage, arrayOfPercentages: $arrayOfPercentages)
+                    .listRowSeparator(.hidden)
+                
+                //MARK: - Count of People
+                PickerPeople(numberOfPeople: $numberOfPeople)
+                    .listRowBackground(Color(.clear))
+                    .listRowSeparator(.hidden)
+                
+                //MARK: - Randomize
+                Section(header: Text("Trying something...")) {
+                    HStack {
+                        ButtonRandomTip(arrayOfPercentages: $arrayOfPercentages, selectedPercentage: $selectedPercentage)
+                        ButtonAddFriends(friendsName: $friendsName, peopleCount: numberOfPeople + 2)
+                    }
+                    .buttonStyle(PlainButtonStyle())
                 }
-            }//ScrollView
+                .listRowSeparator(.hidden)
+                //MARK: - People who have to pay yhe bill
+                
+                
+                //MARK: - Total from other people
+                
+                //MARK: - Total Amount
+                
+            }//List
+            .edgesIgnoringSafeArea(.all)
+            .listStyle(.grouped)
             .navigationTitle("Split The Tip")
         }// NavigationView
+        
     }
 }
 
 
-    //MARK: - Preview
+//MARK: - Preview
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

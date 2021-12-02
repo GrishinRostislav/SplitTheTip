@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C713B4C62758DE2000702BCF /* ButtonRandomTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713B4C52758DE2000702BCF /* ButtonRandomTip.swift */; };
+		C713B4C82758E9C000702BCF /* ButtonAddFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713B4C72758E9C000702BCF /* ButtonAddFriends.swift */; };
 		C75ECA4F27564714008D45C6 /* AddingNewFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75ECA4E27564714008D45C6 /* AddingNewFriend.swift */; };
-		C78CB882275802F0002C3467 /* HorizontalPickerPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78CB881275802F0002C3467 /* HorizontalPickerPeople.swift */; };
-		C78CB8842758058B002C3467 /* HorizontalPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78CB8832758058B002C3467 /* HorizontalPicker.swift */; };
+		C78CB882275802F0002C3467 /* PickerPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78CB881275802F0002C3467 /* PickerPeople.swift */; };
 		C78CB88627580AB3002C3467 /* ButtonRandomPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78CB88527580AB3002C3467 /* ButtonRandomPeople.swift */; };
 		C7C425D72754F37B00BF9E8B /* SplitTheTipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C425D62754F37B00BF9E8B /* SplitTheTipApp.swift */; };
 		C7C425D92754F37B00BF9E8B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C425D82754F37B00BF9E8B /* ContentView.swift */; };
 		C7C425DB2754F37E00BF9E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C425DA2754F37E00BF9E8B /* Assets.xcassets */; };
 		C7C425DE2754F37E00BF9E8B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C425DD2754F37E00BF9E8B /* Preview Assets.xcassets */; };
-		C7C425E72754FEB900BF9E8B /* CountOfPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C425E62754FEB900BF9E8B /* CountOfPeopleView.swift */; };
 		C7C425E92754FEDF00BF9E8B /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C425E82754FEDF00BF9E8B /* AmountView.swift */; };
 		C7C425EB2754FEF200BF9E8B /* AmountTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C425EA2754FEF200BF9E8B /* AmountTotalView.swift */; };
 		C7C425ED2754FF0900BF9E8B /* PercentageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C425EC2754FF0900BF9E8B /* PercentageView.swift */; };
@@ -23,16 +23,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C713B4C52758DE2000702BCF /* ButtonRandomTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRandomTip.swift; sourceTree = "<group>"; };
+		C713B4C72758E9C000702BCF /* ButtonAddFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAddFriends.swift; sourceTree = "<group>"; };
 		C75ECA4E27564714008D45C6 /* AddingNewFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingNewFriend.swift; sourceTree = "<group>"; };
-		C78CB881275802F0002C3467 /* HorizontalPickerPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalPickerPeople.swift; sourceTree = "<group>"; };
-		C78CB8832758058B002C3467 /* HorizontalPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalPicker.swift; sourceTree = "<group>"; };
+		C78CB881275802F0002C3467 /* PickerPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerPeople.swift; sourceTree = "<group>"; };
 		C78CB88527580AB3002C3467 /* ButtonRandomPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRandomPeople.swift; sourceTree = "<group>"; };
 		C7C425D32754F37B00BF9E8B /* SplitTheTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitTheTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C425D62754F37B00BF9E8B /* SplitTheTipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitTheTipApp.swift; sourceTree = "<group>"; };
 		C7C425D82754F37B00BF9E8B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C7C425DA2754F37E00BF9E8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7C425DD2754F37E00BF9E8B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C7C425E62754FEB900BF9E8B /* CountOfPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountOfPeopleView.swift; sourceTree = "<group>"; };
 		C7C425E82754FEDF00BF9E8B /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		C7C425EA2754FEF200BF9E8B /* AmountTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountTotalView.swift; sourceTree = "<group>"; };
 		C7C425EC2754FF0900BF9E8B /* PercentageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageView.swift; sourceTree = "<group>"; };
@@ -92,11 +92,12 @@
 			children = (
 				C7C425E82754FEDF00BF9E8B /* AmountView.swift */,
 				C7C425EC2754FF0900BF9E8B /* PercentageView.swift */,
-				C7C425E62754FEB900BF9E8B /* CountOfPeopleView.swift */,
-				C78CB881275802F0002C3467 /* HorizontalPickerPeople.swift */,
+				C713B4C52758DE2000702BCF /* ButtonRandomTip.swift */,
+				C713B4C72758E9C000702BCF /* ButtonAddFriends.swift */,
+				C78CB881275802F0002C3467 /* PickerPeople.swift */,
+				C78CB88527580AB3002C3467 /* ButtonRandomPeople.swift */,
 				C75ECA4E27564714008D45C6 /* AddingNewFriend.swift */,
 				C7C425EA2754FEF200BF9E8B /* AmountTotalView.swift */,
-				C78CB88527580AB3002C3467 /* ButtonRandomPeople.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				C7FBA9F627557532007747D5 /* StyleForRows.swift */,
-				C78CB8832758058B002C3467 /* HorizontalPicker.swift */,
 			);
 			path = Exctension;
 			sourceTree = "<group>";
@@ -190,14 +190,14 @@
 			files = (
 				C7C425EB2754FEF200BF9E8B /* AmountTotalView.swift in Sources */,
 				C75ECA4F27564714008D45C6 /* AddingNewFriend.swift in Sources */,
-				C7C425E72754FEB900BF9E8B /* CountOfPeopleView.swift in Sources */,
 				C78CB88627580AB3002C3467 /* ButtonRandomPeople.swift in Sources */,
-				C78CB8842758058B002C3467 /* HorizontalPicker.swift in Sources */,
+				C713B4C82758E9C000702BCF /* ButtonAddFriends.swift in Sources */,
 				C7C425D92754F37B00BF9E8B /* ContentView.swift in Sources */,
 				C7FBA9F727557532007747D5 /* StyleForRows.swift in Sources */,
 				C7C425E92754FEDF00BF9E8B /* AmountView.swift in Sources */,
+				C713B4C62758DE2000702BCF /* ButtonRandomTip.swift in Sources */,
 				C7C425ED2754FF0900BF9E8B /* PercentageView.swift in Sources */,
-				C78CB882275802F0002C3467 /* HorizontalPickerPeople.swift in Sources */,
+				C78CB882275802F0002C3467 /* PickerPeople.swift in Sources */,
 				C7C425D72754F37B00BF9E8B /* SplitTheTipApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
