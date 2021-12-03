@@ -14,6 +14,11 @@ struct AddingNewFriend: View {
     @State private var newFriend = ""
     
     var peopleCount = 0
+//    
+//    init() {
+//        UITableView.appearance().backgroundColor = UIColor(Color("BackGround"))
+//       // UITableViewCell.appearance().backgroundColor = .clear
+//    }
     
     var body: some View {
         
@@ -25,6 +30,7 @@ struct AddingNewFriend: View {
                         Button {
                             if !newFriend.isEmpty && peopleCount > friends.count {
                                 friends.append(newFriend)
+                                friends.shuffle()
                                 newFriend = ""
                             }
                         } label: {
@@ -36,6 +42,7 @@ struct AddingNewFriend: View {
                     ForEach(friends, id: \.self) {
                         Text($0)
                     }
+                    .onDelete(perform: delete)
                 }
             }
             .navigationTitle("Add friend")
@@ -46,8 +53,12 @@ struct AddingNewFriend: View {
                 }
             }
         }
-        
+        .background(Color("BackGround"))
     }
+    func delete(at offsets: IndexSet) {
+            friends.remove(atOffsets: offsets)
+        }
+    
 }
 
 struct AddingNewFriend_Previews: PreviewProvider {

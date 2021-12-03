@@ -14,7 +14,12 @@ struct ContentView: View {
     @State private var selectedPercentage = 20 // default number of percentage
     @State private var friendsName: [String] = [] //friends name for random tips
     @State private var arrayOfPercentages = [10, 15, 20, 25, 0]
+    @State private var payers: [String] = []
     @FocusState var isInputActive: Bool
+    
+    var peopleNumber: Int {
+        return numberOfPeople + 2
+    }
     
     init() {
         UITableView.appearance().backgroundColor = UIColor(Color("BackGround"))
@@ -42,20 +47,23 @@ struct ContentView: View {
                 
                 //MARK: - Randomize
                 Section(header: Text("Trying something...")) {
-                    HStack {
-                        ButtonRandomTip(arrayOfPercentages: $arrayOfPercentages, selectedPercentage: $selectedPercentage)
-                        ButtonAddFriends(friendsName: $friendsName, peopleCount: numberOfPeople + 2)
+                    VStack {
+                        HStack {
+                            ButtonRandomTip(arrayOfPercentages: $arrayOfPercentages, selectedPercentage: $selectedPercentage)
+                            ButtonAddFriends(friendsName: $friendsName, peopleCount: numberOfPeople + 2)
+                        }
+                        //MARK: - People who have to pay yhe bill
+                        ButtonRandomPayers(friendsName: friendsName, payers: $payers)
                     }
                     .buttonStyle(PlainButtonStyle())
                 }
                 .listRowSeparator(.hidden)
-                //MARK: - People who have to pay yhe bill
-                
-                
-                //MARK: - Total from other people
                 
                 //MARK: - Total Amount
-                
+                Section(header: Text("Invoice for payment")) {
+                    ListOfPayers(payers: $payers, amount: $amount, percentage: $selectedPercentage, numberOfPeople: peopleNumber)
+                }
+                .listRowSeparator(.hidden)
             }//List
             .edgesIgnoringSafeArea(.all)
             .listStyle(.grouped)
